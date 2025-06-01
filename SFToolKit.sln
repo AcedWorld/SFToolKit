@@ -11,10 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Repository.json = Repository.json
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{1A2404DE-EC8D-45AC-B1D0-47AF27D61875}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Downloads\step1_update_upgrade.png = ..\..\..\..\Downloads\step1_update_upgrade.png
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{6CA43153-6EC3-4EAB-B8CF-F0DC078B330E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +26,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6CA43153-6EC3-4EAB-B8CF-F0DC078B330E} = {1744B02D-ADA2-47C3-8514-4386858D5F58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {950FA6BD-02FB-4F05-B459-4B77D8FA33A7}
