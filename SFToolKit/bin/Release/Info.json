@@ -1,0 +1,11 @@
+{
+  "Id":             "SFToolKit",
+  "DisplayName":    "SFToolKit",
+  "Version":        "1.0.1",
+  "Author":         "SFToolKit",
+  "ManagerVersion": "0.28.0",
+  "AssemblyName":   "SFToolKit.dll",
+  "EntryMethod":    "SFToolKit.Main.Load",
+  "HomePage": "https://www.nexusmods.com/pathfinderkingmaker/mods/1",
+  "Repository": "https://raw.githubusercontent.com/YourName/unity-mods/master/Repository.json"
+}
