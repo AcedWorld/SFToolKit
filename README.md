@@ -1,5 +1,12 @@
 Mod files -> [SFToolKit.zip](https://github.com/AcedWorld/SFToolKit/releases/latest)
 
+This Tool-Kit will be updated with all the changeable options that I can find in the game.
+Some features won't change much that you can see in the game.
+I still need to go through and work out what is useful and what is not.
+So far I have seen that you can have super speed, super jump and do tricks faster.
+I will make another menu in the future that only has useful options that are easier to use.
+Message me if you discover anything really cool that you can do with certain settings applied.
+
 Installation guide below.
 
 ![](./images/sftoolkit_preview_1.jpg)
