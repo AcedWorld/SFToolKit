@@ -179,7 +179,7 @@ public class Menu : MonoBehaviour
         }
 
         // Draw a window at windowRect; user can drag it around
-        windowRect = GUI.Window(0, windowRect, DrawContents, "Scooter Flow Tool-Kit v1.0.1");
+        windowRect = GUI.Window(0, windowRect, DrawContents, "Scooter Flow Tool-Kit v1.0.0");
     }
 
     private void DrawContents(int id)
