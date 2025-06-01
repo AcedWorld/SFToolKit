@@ -6,6 +6,6 @@
   "ManagerVersion": "0.28.0",
   "AssemblyName":   "SFToolKit.dll",
   "EntryMethod":    "SFToolKit.Main.Load",
-  "HomePage": "https://www.nexusmods.com/pathfinderkingmaker/mods/1",
-  "Repository": "https://raw.githubusercontent.com/YourName/unity-mods/master/Repository.json"
+  "HomePage":      "https://github.com/AcedWorld/SFToolKit",
+  "Repository":    "https://raw.githubusercontent.com/AcedWorld/SFToolKit/refs/heads/main/SFToolKit/Repository.json"
 }
