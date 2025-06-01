@@ -7,7 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SFToolKit", "SFToolKit\SFTo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1744B02D-ADA2-47C3-8514-4386858D5F58}"
 	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
 		Repository.json = Repository.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{1A2404DE-EC8D-45AC-B1D0-47AF27D61875}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Downloads\step1_update_upgrade.png = ..\..\..\..\Downloads\step1_update_upgrade.png
 	EndProjectSection
 EndProject
 Global
