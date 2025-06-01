@@ -1,3 +1,6 @@
+Mod files -> [SFToolKit.zip](https://github.com/AcedWorld/SFToolKit/releases/latest)
+Installation guide below.
+
 ![](./images/sftoolkit_preview_1.jpg)
 
 #### Step 1
