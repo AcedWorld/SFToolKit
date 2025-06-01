@@ -1,7 +1,7 @@
 {
   "Id":             "SFToolKit",
   "DisplayName":    "SFToolKit",
-  "Version":        "1.0.0",
+  "Version":        "1.0.1",
   "Author":         "SFToolKit",
   "ManagerVersion": "0.28.0",
   "AssemblyName":   "SFToolKit.dll",
