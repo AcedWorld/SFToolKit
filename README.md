@@ -1,20 +1,27 @@
 Mod files -> [SFToolKit.zip](https://github.com/AcedWorld/SFToolKit/releases/latest)
 
 Jump higher:
-NormalHopSettings- Normal Strenght
+
+NormalHopSettings - Normal Strenght
+
 LowHopSettings - Low Strenght 
 
 Do tricks faster:
+
 Anim Speed
 
 Do 360's faster:
+
 Spin Speed
 
 Push faster:
+
 Max Motor Torque 
+
 Initial Push Force
 
 Pump faster:
+
 Pump Force
 
 
