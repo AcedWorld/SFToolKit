@@ -1736,7 +1736,7 @@ public class Menu : MonoBehaviour
 
         // Show the TextField, but parse only when “Apply” is clicked.
         tweakStepString = GUILayout.TextField(tweakStepString, GUILayout.Width(80));
-        if (GUILayout.Button("Apply", GUILayout.Width(60)))
+        if (GUILayout.Button("Set", GUILayout.Width(50)))
         {
             if (float.TryParse(tweakStepString, out float parsed))
                 tweakStep = Mathf.Max(0f, parsed);
