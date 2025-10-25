@@ -26,7 +26,7 @@ Message me if you discover anything really cool that you can do with certain set
 
 Installation guide below.
 
-![](./images/sftoolkit_preview_1.jpg)
+![](./images/SFToolKit.jpg)
 
 #### Step 1
 Download [Unity Mod Manger](https://github.com/AcedWorld/SFToolKit/releases/download/UMM/ScooterFlowUnityModManager.zip)
