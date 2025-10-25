@@ -29,7 +29,7 @@ Installation guide below.
 ![](./images/SFToolKit.jpg)
 
 #### Step 1
-Download [Unity Mod Manger](https://github.com/AcedWorld/SFToolKit/releases/download/UMM/ScooterFlowUnityModManager.zip)
+Download [Unity Mod Manger](https://github.com/AcedWorld/SFToolKit/releases/download/0.0.0/UnityModManagerInstaller.zip)
 
 ![](./images/umm_download.jpg)
 
