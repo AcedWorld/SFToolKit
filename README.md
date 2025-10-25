@@ -1,31 +1,5 @@
 Mod files -> [SFToolKit.zip](https://github.com/AcedWorld/SFToolKit/releases/latest)
 
-Jump higher:
-NormalHopSettings (Normal Strenght), 
-LowHopSettings (Low Strenght)
-
-Do tricks faster:
-Anim Speed
-
-Do 360's faster:
-Spin Speed
-
-Push faster:
-Max Motor Torque, Initial Push Force
-
-Pump faster:
-Pump Force
-
-
-This Tool-Kit will be updated with all the changeable options that I can find in the game.
-Some features won't change much that you can see in the game.
-I still need to go through and work out what is useful and what is not.
-So far I have seen that you can have super speed, super jump and do tricks faster.
-I will make another menu in the future that only has useful options that are easier to use.
-Message me if you discover anything really cool that you can do with certain settings applied.
-
-Installation guide below.
-
 ![](./images/SFToolKit.jpg)
 
 #### Step 1
