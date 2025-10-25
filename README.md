@@ -1,5 +1,3 @@
-Mod files -> [SFToolKit.zip](https://github.com/AcedWorld/SFToolKit/releases/latest)
-
 ![](./images/SFToolKit.jpg)
 
 #### Step 1
