@@ -1,12 +1,11 @@
 {
   "Id":             "SFToolKit",
   "DisplayName":    "SFToolKit",
-  "Version":        "1.0.1",
+  "Version":        "2.0.0",
   "Author":         "SFToolKit",
-  "ManagerVersion": "0.28.0",
+  "ManagerVersion": "0.32.4",
   "AssemblyName":   "SFToolKit.dll",
   "EntryMethod":    "SFToolKit.Main.Load",
   "HomePage":      "https://github.com/AcedWorld/SFToolKit",
-  "Repository":    "https://raw.githubusercontent.com/AcedWorld/SFToolKit/main/Repository.json
-"
+  "Repository":    "https://raw.githubusercontent.com/AcedWorld/SFToolKit/main/Repository.json"
 }
