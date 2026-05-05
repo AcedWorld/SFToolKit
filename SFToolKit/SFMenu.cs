@@ -113,12 +113,15 @@ public class SFMenu : MonoBehaviour
         if (!isMenuOpen)
         {
             // Small open button (optional); hotkey also works
-            if (GUI.Button(new Rect(10, 10, 30, 30), ">"))
+            string openText = "F1 to open";
+            Vector2 size = GUI.skin.button.CalcSize(new GUIContent(openText));
+
+            if (GUI.Button(new Rect(10, 10, size.x + 12f, 30), openText))
                 SetMenuOpen(true);
             return;
         }
 
-        windowRect = GUI.Window(0, windowRect, DrawContents, "SFToolKit v2.0.2");
+        windowRect = GUI.Window(0, windowRect, DrawContents, "SFToolKit v3.0.1");
     }
 
     private void DrawContents(int id)

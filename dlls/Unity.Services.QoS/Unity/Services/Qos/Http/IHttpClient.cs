@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using UnityEngine.Networking;
+
+namespace Unity.Services.Qos.Http
+{
+	// Token: 0x02000064 RID: 100
+	internal interface IHttpClient
+	{
+		// Token: 0x060001C8 RID: 456
+		Task<HttpClientResponse> MakeRequestAsync(string method, string url, byte[] body, Dictionary<string, string> headers, int requestTimeout);
+
+		// Token: 0x060001C9 RID: 457
+		Task<HttpClientResponse> MakeRequestAsync(string method, string url, List<IMultipartFormSection> body, Dictionary<string, string> headers, int requestTimeout, string boundary = null);
+	}
+}

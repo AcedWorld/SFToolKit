@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2865A95-6777-4D17-A0E5-FFB6E1894584}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unity.Services.Lobbies</RootNamespace>
+    <AssemblyName>Unity.Services.Lobbies</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apis\Lobby\ILobbyApiClient.cs" />
+    <Compile Include="Apis\Lobby\LobbyApiClient.cs" />
+    <Compile Include="Apis\Lobby\LobbyApiNames.cs" />
+    <Compile Include="ChangedLobbyValue.cs" />
+    <Compile Include="ChangedOrRemovedLobbyValue.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="CreateLobbyOptions.cs" />
+    <Compile Include="ErrorMitigation\ExceptionPredicate.cs" />
+    <Compile Include="ErrorMitigation\IRetryPolicy.cs" />
+    <Compile Include="ErrorMitigation\IRetryPolicyProvider.cs" />
+    <Compile Include="ErrorMitigation\RetryPolicy.cs" />
+    <Compile Include="ErrorMitigation\RetryPolicyConfig.cs" />
+    <Compile Include="ErrorMitigation\RetryPolicyProvider.cs" />
+    <Compile Include="ErrorMitigation\StatusCodePolicyConfig.cs" />
+    <Compile Include="Helpers\AsyncOpRetry.2.cs" />
+    <Compile Include="Helpers\AsyncOpRetry.cs" />
+    <Compile Include="Http\ApiTelemetryScope.cs" />
+    <Compile Include="Http\ApiTelemetryScopeFactory.cs" />
+    <Compile Include="Http\BaseApiClient.cs" />
+    <Compile Include="Http\BasicError.cs" />
+    <Compile Include="Http\CommonErrors.cs" />
+    <Compile Include="Http\DeserializationException.cs" />
+    <Compile Include="Http\DeserializationSettings.cs" />
+    <Compile Include="Http\HttpClient.cs" />
+    <Compile Include="Http\HttpClientResponse.cs" />
+    <Compile Include="Http\HttpException.2.cs" />
+    <Compile Include="Http\HttpException.cs" />
+    <Compile Include="Http\IDeserializable.cs" />
+    <Compile Include="Http\IError.cs" />
+    <Compile Include="Http\IHttpClient.cs" />
+    <Compile Include="Http\JsonHelpers.cs" />
+    <Compile Include="Http\JsonObject.cs" />
+    <Compile Include="Http\JsonObjectCollectionConverter.cs" />
+    <Compile Include="Http\JsonObjectConverter.cs" />
+    <Compile Include="Http\MissingMemberHandling.cs" />
+    <Compile Include="Http\ResponseDeserializationException.cs" />
+    <Compile Include="Http\ResponseHandler.cs" />
+    <Compile Include="Http\UnityWebRequestHelpers.cs" />
+    <Compile Include="ILobbyChanges.cs" />
+    <Compile Include="ILobbyEvents.cs" />
+    <Compile Include="ILobbyService.cs" />
+    <Compile Include="ILobbyServiceSDK.2.cs" />
+    <Compile Include="ILobbyServiceSdk.cs" />
+    <Compile Include="ILobbyServiceSDKConfiguration.cs" />
+    <Compile Include="InternalLobbyService.cs" />
+    <Compile Include="Internal\ILobbyServiceInternal.cs" />
+    <Compile Include="Internal\LobbyChannel.cs" />
+    <Compile Include="Internal\LobbyWireTokenProvider.cs" />
+    <Compile Include="Internal\WrappedLobbyService.cs" />
+    <Compile Include="JoinLobbyByCodeOptions.cs" />
+    <Compile Include="JoinLobbyByIdOptions.cs" />
+    <Compile Include="Lobbies.cs" />
+    <Compile Include="LobbyEventCallbacks.cs" />
+    <Compile Include="LobbyEventConnectionState.cs" />
+    <Compile Include="LobbyExceptionReason.cs" />
+    <Compile Include="LobbyPatcher.cs" />
+    <Compile Include="LobbyPatcherChanges.cs" />
+    <Compile Include="LobbyPlayerChanges.cs" />
+    <Compile Include="LobbyPlayerJoined.cs" />
+    <Compile Include="LobbyService.cs" />
+    <Compile Include="LobbyServiceException.cs" />
+    <Compile Include="LobbyServiceProvider.cs" />
+    <Compile Include="LobbyServiceSdk.cs" />
+    <Compile Include="LobbyValue.cs" />
+    <Compile Include="LobbyValueChangeType.cs" />
+    <Compile Include="Lobby\BulkUpdateLobbyRequest.cs" />
+    <Compile Include="Lobby\CreateLobbyRequest.cs" />
+    <Compile Include="Lobby\CreateOrJoinLobbyRequest.cs" />
+    <Compile Include="Lobby\DeleteLobbyRequest.cs" />
+    <Compile Include="Lobby\GetHostedLobbiesRequest.cs" />
+    <Compile Include="Lobby\GetJoinedLobbiesRequest.cs" />
+    <Compile Include="Lobby\GetLobbyRequest.cs" />
+    <Compile Include="Lobby\HeartbeatRequest.cs" />
+    <Compile Include="Lobby\JoinLobbyByCodeRequest.cs" />
+    <Compile Include="Lobby\JoinLobbyByIdRequest.cs" />
+    <Compile Include="Lobby\JsonSerialization.cs" />
+    <Compile Include="Lobby\LobbyApiBaseRequest.cs" />
+    <Compile Include="Lobby\QueryLobbiesRequest.cs" />
+    <Compile Include="Lobby\QuickJoinLobbyRequest.cs" />
+    <Compile Include="Lobby\ReconnectRequest.cs" />
+    <Compile Include="Lobby\RemovePlayerRequest.cs" />
+    <Compile Include="Lobby\RequestTokensRequest.cs" />
+    <Compile Include="Lobby\UpdateLobbyRequest.cs" />
+    <Compile Include="Lobby\UpdatePlayerRequest.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Models\BulkUpdateRequest.cs" />
+    <Compile Include="Models\CreateRequest.cs" />
+    <Compile Include="Models\DataObject.cs" />
+    <Compile Include="Models\Detail.cs" />
+    <Compile Include="Models\ErrorStatus.cs" />
+    <Compile Include="Models\IOneOf.cs" />
+    <Compile Include="Models\JoinByCodeRequest.cs" />
+    <Compile Include="Models\JoinByIdRequest.cs" />
+    <Compile Include="Models\Lobby.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\PlayerDataObject.cs" />
+    <Compile Include="Models\PlayerProfile.cs" />
+    <Compile Include="Models\PlayerUpdateRequest.cs" />
+    <Compile Include="Models\QueryFilter.cs" />
+    <Compile Include="Models\QueryOrder.cs" />
+    <Compile Include="Models\QueryRequest.cs" />
+    <Compile Include="Models\QueryResponse.cs" />
+    <Compile Include="Models\QuickJoinRequest.cs" />
+    <Compile Include="Models\TokenData.cs" />
+    <Compile Include="Models\TokenRequest.cs" />
+    <Compile Include="Models\UpdateRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryLobbiesOptions.cs" />
+    <Compile Include="QuickJoinLobbyOptions.cs" />
+    <Compile Include="Response.2.cs" />
+    <Compile Include="Response.cs" />
+    <Compile Include="Scheduler\EngineStateHelper.cs" />
+    <Compile Include="Scheduler\GameObjectFactory.cs" />
+    <Compile Include="Scheduler\TaskScheduler.cs" />
+    <Compile Include="Scheduler\TaskSchedulerThreaded.cs" />
+    <Compile Include="Scheduler\TaskSchedulerWebGL.cs" />
+    <Compile Include="Scheduler\ThreadHelper.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableAttribute.cs" />
+    <Compile Include="UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs" />
+    <Compile Include="UpdateLobbyOptions.cs" />
+    <Compile Include="UpdatePlayerOptions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\netstandard\netstandard.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E189453F}</Project>
+      <Name>netstandard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Newtonsoft.Json\Newtonsoft.Json.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E1894540}</Project>
+      <Name>Newtonsoft.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Services.Authentication\Unity.Services.Authentication.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E1894575}</Project>
+      <Name>Unity.Services.Authentication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Services.Core.Internal\Unity.Services.Core.Internal.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E189457E}</Project>
+      <Name>Unity.Services.Core.Internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Services.Core\Unity.Services.Core.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E189457B}</Project>
+      <Name>Unity.Services.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.CoreModule\UnityEngine.CoreModule.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E189459A}</Project>
+      <Name>UnityEngine.CoreModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.UnityWebRequestModule\UnityEngine.UnityWebRequestModule.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E18945CB}</Project>
+      <Name>UnityEngine.UnityWebRequestModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

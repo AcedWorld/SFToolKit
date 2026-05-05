@@ -1,0 +1,38 @@
+Netcode Entry Points
+
+MultiTransformSyncLiteCleaned.cs:171 exposes SendStateServerRpc and BroadcastStateClientRpc, letting the owning client push transform arrays, rolling/grind/crash audio levels, and one-shot sound triggers that are interpolated on every peer—use this if you need all players to see movement or hear effects in sync.
+NetworkClothingSync.cs:81 lets the owner call SubmitConfigServerRpc to update a NetworkVariable<ClothingConfig>; when it changes, OnConfigChanged reapplies the clothing for everyone, so you can drive wardrobe swaps or cosmetics visible to every client.
+NetworkOutfitSyncAll.cs:91 performs full-body outfit replication—SubmitFullServerRpc writes a serialized OutfitConfig, and ApplyAll rebuilds meshes/materials on each client. Call PushFromLocal/SetFromNames after tweaking parts to make global outfit changes.
+NetworkScooterSyncAll.cs:96 mirrors scooter customization the same way; the owner packages ScooterConfig via SubmitFullServerRpc, and ApplyAll rebuilds deck/bars/etc. across the session, so vehicle mods or FX attachments propagate instantly.
+PlayerNameTag.cs:101 and PlayerNameTag.cs:145 manage name visibility: the owner invokes RegisterPlayerNameServerRpc, the server caches names, and UpdatePlayerNameClientRpc pushes them to specific or all clients—reuse this pattern for any text/UI broadcast you need.
+NetworkSoundManager.cs:6 ties into the sync above: as the owner toggles collision/grind state it updates AudioSources, and the synced volumes/pitches from MultiTransformSyncLiteCleaned keep remote listeners in lockstep; piggyback here to trigger shared SFX.
+Supporting Systems To Hook
+
+ChildObjectHandler.cs:7 strips owner-only components on remote copies, so any behaviour you add under Player/Character should respect this or inject its own network-safe version.
+NameTagSpawner.cs:7 instantiates local name tag prefabs for the owner; pair it with the RPC-driven PlayerNameTag flow if you want extra billboards or markers seen by all.
+SpawnPhysicsGuard.cs:7 enforces a deterministic spawn pose on clients—extend its guard window if your new networked objects need extra settle time before physics goes live.
+NetworkVariableSerializationHelper.cs:14 already registers serializers for outfit/scooter/clothing configs; mirror this if you introduce new structs you plan to replicate so every client can deserialize your payloads.
+Natural next steps:
+
+Decide which of the server RPC / client RPC hooks above best matches the effect you want (movement, cosmetics, text, audio).
+Prototype by calling the existing owner-side helpers (PushFromLocal, OwnerPushCurrentClothes, etc.) after altering the local state, confirm the visuals/audio propagate, then factor out reusable wrappers if you need a cleaner API.
+
+
+----------------------------------
+
+
+Findings
+
+.dlls/Assembly-CSharp/PlayerNameTag.cs:10 shows the in-game name system: a NetworkBehaviour stores a static Dictionary<ulong,string> of names keyed by NetworkObjectId, pushes updates through RegisterPlayerNameServerRpc and UpdatePlayerNameClientRpc, and hides the owner’s tag when local. Reflecting this type (as your existing NameTagHelper already does) lets you enumerate everyone currently tracked and pull their display names.
+.dlls/Assembly-CSharp/NameTagSpawner.cs:7 instantiates the world-space name tag prefab for the owner, confirming where the text mesh lives if you want to grab it directly.
+.dlls/Assembly-CSharp/NetworkLobbyManager.cs:125 contains the lobby pipeline; in WaitForSteamName it blocks until SteamFriends.GetPersonaName() succeeds and stashes that string in LobbyPreset.steamName. You can hook the same flow (or read the preset) to capture the self Steam persona used during matchmaking.
+.dlls/Assembly-CSharp/LobbyInfo.cs:11 shows the lobby listings also carry a steamName per host, so surfaced data exists once you refresh lobbies.
+.dlls/Assembly-CSharp/SteamInfo.cs:6 is a simple MonoBehaviour already calling SteamUser.GetSteamID() and caching it alongside the persona name and avatar texture; it’s a handy reference for accessing the local Steam ID inside the Unity environment.
+Steamworks Wrapper
+
+.dlls/com.rlabrecque.steamworks.net/SteamFriends.cs:64 exposes GetFriendPersonaName(CSteamID), letting you resolve remote Steam display names when you know their IDs.
+.dlls/com.rlabrecque.steamworks.net/SteamUser.cs:24 exposes GetSteamID() for the local user and other identity helpers. The rest of this folder is the full Steamworks.NET binding, so you can look up additional calls (e.g., GetFriendByIndex, lobby metadata) as needed.
+Next Steps
+
+Combine the PlayerNameTag.playerNames map with NetworkManager.Singleton.ConnectedClientsList to display an in-game roster; fall back to the default “Player {id}” strings if a name hasn’t synced yet.
+Track each connected client’s OwnerClientId → CSteamID relationship by listening for lobby join data or Steam P2P callbacks; once you have the IDs, run them through SteamFriends.GetFriendPersonaName for authoritative names.

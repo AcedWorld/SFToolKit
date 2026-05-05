@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2865A95-6777-4D17-A0E5-FFB6E189456D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unity.Netcode.Runtime</RootNamespace>
+    <AssemblyName>Unity.Netcode.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-NetStats_TypeRegistration-.cs" />
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsUnmanagedAttribute.cs" />
+    <Compile Include="UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs" />
+    <Compile Include="Unity\Netcode\AnticipatedNetworkVariable.cs" />
+    <Compile Include="Unity\Netcode\AnticipationCounterSyncPingMessage.cs" />
+    <Compile Include="Unity\Netcode\AnticipationCounterSyncPongMessage.cs" />
+    <Compile Include="Unity\Netcode\AnticipationSystem.cs" />
+    <Compile Include="Unity\Netcode\Arithmetic.cs" />
+    <Compile Include="Unity\Netcode\BaseRpcTarget.cs" />
+    <Compile Include="Unity\Netcode\BitCounter.cs" />
+    <Compile Include="Unity\Netcode\BitReader.cs" />
+    <Compile Include="Unity\Netcode\BitWriter.cs" />
+    <Compile Include="Unity\Netcode\BufferSerializer.cs" />
+    <Compile Include="Unity\Netcode\BufferSerializerReader.cs" />
+    <Compile Include="Unity\Netcode\BufferSerializerWriter.cs" />
+    <Compile Include="Unity\Netcode\ByteBool.cs" />
+    <Compile Include="Unity\Netcode\BytePacker.cs" />
+    <Compile Include="Unity\Netcode\ByteUnpacker.cs" />
+    <Compile Include="Unity\Netcode\ByteUtility.cs" />
+    <Compile Include="Unity\Netcode\ChangeOwnershipMessage.cs" />
+    <Compile Include="Unity\Netcode\ClientConnectedMessage.cs" />
+    <Compile Include="Unity\Netcode\ClientDisconnectedMessage.cs" />
+    <Compile Include="Unity\Netcode\ClientRpcAttribute.cs" />
+    <Compile Include="Unity\Netcode\ClientRpcMessage.cs" />
+    <Compile Include="Unity\Netcode\ClientRpcParams.cs" />
+    <Compile Include="Unity\Netcode\ClientRpcReceiveParams.cs" />
+    <Compile Include="Unity\Netcode\ClientRpcSendParams.cs" />
+    <Compile Include="Unity\Netcode\ClientsAndHostRpcTarget.cs" />
+    <Compile Include="Unity\Netcode\CollectionSerializationUtility.cs" />
+    <Compile Include="Unity\Netcode\ComponentFactory.cs" />
+    <Compile Include="Unity\Netcode\ConnectionApprovedMessage.cs" />
+    <Compile Include="Unity\Netcode\ConnectionEvent.cs" />
+    <Compile Include="Unity\Netcode\ConnectionEventData.cs" />
+    <Compile Include="Unity\Netcode\ConnectionRequestMessage.cs" />
+    <Compile Include="Unity\Netcode\CreateObjectMessage.cs" />
+    <Compile Include="Unity\Netcode\CustomMessagingManager.cs" />
+    <Compile Include="Unity\Netcode\DefaultMessageSender.cs" />
+    <Compile Include="Unity\Netcode\DefaultSceneManagerHandler.cs" />
+    <Compile Include="Unity\Netcode\DeferredMessageManager.cs" />
+    <Compile Include="Unity\Netcode\DestroyObjectMessage.cs" />
+    <Compile Include="Unity\Netcode\DictionarySerializer.cs" />
+    <Compile Include="Unity\Netcode\DirectSendRpcTarget.cs" />
+    <Compile Include="Unity\Netcode\DisconnectReasonMessage.cs" />
+    <Compile Include="Unity\Netcode\EveryoneRpcTarget.cs" />
+    <Compile Include="Unity\Netcode\FallbackSerializer.cs" />
+    <Compile Include="Unity\Netcode\FastBufferReader.cs" />
+    <Compile Include="Unity\Netcode\FastBufferWriter.cs" />
+    <Compile Include="Unity\Netcode\FixedStringArraySerializer.cs" />
+    <Compile Include="Unity\Netcode\FixedStringSerializer.cs" />
+    <Compile Include="Unity\Netcode\ForceNetworkSerializeByMemcpy.cs" />
+    <Compile Include="Unity\Netcode\GenerateSerializationForGenericParameterAttribute.cs" />
+    <Compile Include="Unity\Netcode\GenerateSerializationForTypeAttribute.cs" />
+    <Compile Include="Unity\Netcode\HandlerNotRegisteredException.cs" />
+    <Compile Include="Unity\Netcode\HashSetSerializer.cs" />
+    <Compile Include="Unity\Netcode\HashSize.cs" />
+    <Compile Include="Unity\Netcode\IAnticipatedObject.cs" />
+    <Compile Include="Unity\Netcode\IAnticipationEventReceiver.cs" />
+    <Compile Include="Unity\Netcode\IDeferredNetworkMessageManager.cs" />
+    <Compile Include="Unity\Netcode\IGroupRpcTarget.cs" />
+    <Compile Include="Unity\Netcode\IIndividualRpcTarget.cs" />
+    <Compile Include="Unity\Netcode\ILPPMessageProvider.cs" />
+    <Compile Include="Unity\Netcode\INetworkHooks.cs" />
+    <Compile Include="Unity\Netcode\INetworkMessage.cs" />
+    <Compile Include="Unity\Netcode\INetworkMessageProvider.cs" />
+    <Compile Include="Unity\Netcode\INetworkMessageSender.cs" />
+    <Compile Include="Unity\Netcode\INetworkMetrics.cs" />
+    <Compile Include="Unity\Netcode\INetworkPrefabInstanceHandler.cs" />
+    <Compile Include="Unity\Netcode\INetworkSerializable.cs" />
+    <Compile Include="Unity\Netcode\INetworkSerializeByMemcpy.cs" />
+    <Compile Include="Unity\Netcode\INetworkUpdateSystem.cs" />
+    <Compile Include="Unity\Netcode\INetworkVariableSerializer.cs" />
+    <Compile Include="Unity\Netcode\IntSerializer.cs" />
+    <Compile Include="Unity\Netcode\InvalidChannelException.cs" />
+    <Compile Include="Unity\Netcode\InvalidMessageStructureException.cs" />
+    <Compile Include="Unity\Netcode\InvalidParentException.cs" />
+    <Compile Include="Unity\Netcode\IReaderWriter.cs" />
+    <Compile Include="Unity\Netcode\IRealTimeProvider.cs" />
+    <Compile Include="Unity\Netcode\ISceneManagerHandler.cs" />
+    <Compile Include="Unity\Netcode\ListSerializer.cs" />
+    <Compile Include="Unity\Netcode\LocalDeferMode.cs" />
+    <Compile Include="Unity\Netcode\LocalSendRpcTarget.cs" />
+    <Compile Include="Unity\Netcode\LogLevel.cs" />
+    <Compile Include="Unity\Netcode\LongSerializer.cs" />
+    <Compile Include="Unity\Netcode\ManagedNetworkSerializableSerializer.cs" />
+    <Compile Include="Unity\Netcode\MessageVersionData.cs" />
+    <Compile Include="Unity\Netcode\MetricHooks.cs" />
+    <Compile Include="Unity\Netcode\NamedMessage.cs" />
+    <Compile Include="Unity\Netcode\NetcodeObserver.cs" />
+    <Compile Include="Unity\Netcode\NetworkBatchHeader.cs" />
+    <Compile Include="Unity\Netcode\NetworkBehaviour.cs" />
+    <Compile Include="Unity\Netcode\NetworkBehaviourReference.cs" />
+    <Compile Include="Unity\Netcode\NetworkBehaviourUpdater.cs" />
+    <Compile Include="Unity\Netcode\NetworkClient.cs" />
+    <Compile Include="Unity\Netcode\NetworkConfig.cs" />
+    <Compile Include="Unity\Netcode\NetworkConfigurationException.cs" />
+    <Compile Include="Unity\Netcode\NetworkConnectionManager.cs" />
+    <Compile Include="Unity\Netcode\NetworkConstants.cs" />
+    <Compile Include="Unity\Netcode\NetworkContext.cs" />
+    <Compile Include="Unity\Netcode\NetworkDelivery.cs" />
+    <Compile Include="Unity\Netcode\NetworkEvent.cs" />
+    <Compile Include="Unity\Netcode\NetworkList.cs" />
+    <Compile Include="Unity\Netcode\NetworkListEvent.cs" />
+    <Compile Include="Unity\Netcode\NetworkLog.cs" />
+    <Compile Include="Unity\Netcode\NetworkManager.cs" />
+    <Compile Include="Unity\Netcode\NetworkManagerHooks.cs" />
+    <Compile Include="Unity\Netcode\NetworkMessageHeader.cs" />
+    <Compile Include="Unity\Netcode\NetworkMessageManager.cs" />
+    <Compile Include="Unity\Netcode\NetworkMetrics.cs" />
+    <Compile Include="Unity\Netcode\NetworkMetricsManager.cs" />
+    <Compile Include="Unity\Netcode\NetworkObject.cs" />
+    <Compile Include="Unity\Netcode\NetworkObjectProvider.cs" />
+    <Compile Include="Unity\Netcode\NetworkObjectReference.cs" />
+    <Compile Include="Unity\Netcode\NetworkPrefab.cs" />
+    <Compile Include="Unity\Netcode\NetworkPrefabHandler.cs" />
+    <Compile Include="Unity\Netcode\NetworkPrefabOverride.cs" />
+    <Compile Include="Unity\Netcode\NetworkPrefabs.cs" />
+    <Compile Include="Unity\Netcode\NetworkPrefabsList.cs" />
+    <Compile Include="Unity\Netcode\NetworkSceneManager.cs" />
+    <Compile Include="Unity\Netcode\NetworkSpawnManager.cs" />
+    <Compile Include="Unity\Netcode\NetworkTickSystem.cs" />
+    <Compile Include="Unity\Netcode\NetworkTime.cs" />
+    <Compile Include="Unity\Netcode\NetworkTimeSystem.cs" />
+    <Compile Include="Unity\Netcode\NetworkTransport.cs" />
+    <Compile Include="Unity\Netcode\NetworkUpdateLoop.cs" />
+    <Compile Include="Unity\Netcode\NetworkUpdateStage.cs" />
+    <Compile Include="Unity\Netcode\NetworkVariable.cs" />
+    <Compile Include="Unity\Netcode\NetworkVariableBase.cs" />
+    <Compile Include="Unity\Netcode\NetworkVariableDeltaMessage.cs" />
+    <Compile Include="Unity\Netcode\NetworkVariableDictionarySerialization.cs" />
+    <Compile Include="Unity\Netcode\NetworkVariableReadPermission.cs" />
+    <Compile Include="Unity\Netcode\NetworkVariableSerialization.cs" />
+    <Compile Include="Unity\Netcode\NetworkVariableSerializationTypes.cs" />
+    <Compile Include="Unity\Netcode\NetworkVariableUpdateTraits.cs" />
+    <Compile Include="Unity\Netcode\NetworkVariableWritePermission.cs" />
+    <Compile Include="Unity\Netcode\NotListeningException.cs" />
+    <Compile Include="Unity\Netcode\NotMeRpcTarget.cs" />
+    <Compile Include="Unity\Netcode\NotOwnerRpcTarget.cs" />
+    <Compile Include="Unity\Netcode\NotServerException.cs" />
+    <Compile Include="Unity\Netcode\NotServerRpcTarget.cs" />
+    <Compile Include="Unity\Netcode\NullNetworkMetrics.cs" />
+    <Compile Include="Unity\Netcode\OwnerRpcTarget.cs" />
+    <Compile Include="Unity\Netcode\ParentSyncMessage.cs" />
+    <Compile Include="Unity\Netcode\PendingClient.cs" />
+    <Compile Include="Unity\Netcode\ProfilingHooks.cs" />
+    <Compile Include="Unity\Netcode\ProxyMessage.cs" />
+    <Compile Include="Unity\Netcode\ProxyRpcTarget.cs" />
+    <Compile Include="Unity\Netcode\ProxyRpcTargetGroup.cs" />
+    <Compile Include="Unity\Netcode\RealTimeProvider.cs" />
+    <Compile Include="Unity\Netcode\ReleasedNetworkId.cs" />
+    <Compile Include="Unity\Netcode\ResizableBitVector.cs" />
+    <Compile Include="Unity\Netcode\RpcAttribute.cs" />
+    <Compile Include="Unity\Netcode\RpcDelivery.cs" />
+    <Compile Include="Unity\Netcode\RpcException.cs" />
+    <Compile Include="Unity\Netcode\RpcFallbackSerialization.cs" />
+    <Compile Include="Unity\Netcode\RpcMessage.cs" />
+    <Compile Include="Unity\Netcode\RpcMessageHelpers.cs" />
+    <Compile Include="Unity\Netcode\RpcMetadata.cs" />
+    <Compile Include="Unity\Netcode\RpcParams.cs" />
+    <Compile Include="Unity\Netcode\RpcReceiveParams.cs" />
+    <Compile Include="Unity\Netcode\RpcSendParams.cs" />
+    <Compile Include="Unity\Netcode\RpcTarget.cs" />
+    <Compile Include="Unity\Netcode\RpcTargetGroup.cs" />
+    <Compile Include="Unity\Netcode\RpcTargetUse.cs" />
+    <Compile Include="Unity\Netcode\SceneEvent.cs" />
+    <Compile Include="Unity\Netcode\SceneEventData.cs" />
+    <Compile Include="Unity\Netcode\SceneEventMessage.cs" />
+    <Compile Include="Unity\Netcode\SceneEventProgress.cs" />
+    <Compile Include="Unity\Netcode\SceneEventProgressStatus.cs" />
+    <Compile Include="Unity\Netcode\SceneEventType.cs" />
+    <Compile Include="Unity\Netcode\SendTo.cs" />
+    <Compile Include="Unity\Netcode\ServerLogMessage.cs" />
+    <Compile Include="Unity\Netcode\ServerRpcAttribute.cs" />
+    <Compile Include="Unity\Netcode\ServerRpcMessage.cs" />
+    <Compile Include="Unity\Netcode\ServerRpcParams.cs" />
+    <Compile Include="Unity\Netcode\ServerRpcReceiveParams.cs" />
+    <Compile Include="Unity\Netcode\ServerRpcSendParams.cs" />
+    <Compile Include="Unity\Netcode\ServerRpcTarget.cs" />
+    <Compile Include="Unity\Netcode\ShortSerializer.cs" />
+    <Compile Include="Unity\Netcode\SpawnStateException.cs" />
+    <Compile Include="Unity\Netcode\StaleDataHandling.cs" />
+    <Compile Include="Unity\Netcode\TimeSyncMessage.cs" />
+    <Compile Include="Unity\Netcode\Transports\UTP\BatchedReceiveQueue.cs" />
+    <Compile Include="Unity\Netcode\Transports\UTP\BatchedSendQueue.cs" />
+    <Compile Include="Unity\Netcode\Transports\UTP\ErrorUtilities.cs" />
+    <Compile Include="Unity\Netcode\Transports\UTP\INetworkStreamDriverConstructor.cs" />
+    <Compile Include="Unity\Netcode\Transports\UTP\NetworkMetricsContext.cs" />
+    <Compile Include="Unity\Netcode\Transports\UTP\NetworkMetricsPipelineStage.cs" />
+    <Compile Include="Unity\Netcode\Transports\UTP\SecretsLoaderHelper.cs" />
+    <Compile Include="Unity\Netcode\Transports\UTP\UnityTransport.cs" />
+    <Compile Include="Unity\Netcode\UIntFloat.cs" />
+    <Compile Include="Unity\Netcode\UintSerializer.cs" />
+    <Compile Include="Unity\Netcode\UlongSerializer.cs" />
+    <Compile Include="Unity\Netcode\UnmanagedArraySerializer.cs" />
+    <Compile Include="Unity\Netcode\UnmanagedNetworkSerializableArraySerializer.cs" />
+    <Compile Include="Unity\Netcode\UnmanagedNetworkSerializableSerializer.cs" />
+    <Compile Include="Unity\Netcode\UnmanagedTypeSerializer.cs" />
+    <Compile Include="Unity\Netcode\UnnamedMessage.cs" />
+    <Compile Include="Unity\Netcode\UserNetworkVariableSerialization.cs" />
+    <Compile Include="Unity\Netcode\UshortSerializer.cs" />
+    <Compile Include="Unity\Netcode\VisibilityChangeException.cs" />
+    <Compile Include="Unity\Netcode\XXHash.cs" />
+    <Compile Include="Unity\Netcode\__RpcParams.cs" />
+    <Compile Include="__GEN\INetworkMessageHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\netstandard\netstandard.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E189453F}</Project>
+      <Name>netstandard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Burst\Unity.Burst.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E1894557}</Project>
+      <Name>Unity.Burst</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Collections\Unity.Collections.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E1894559}</Project>
+      <Name>Unity.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Mathematics\Unity.Mathematics.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E189455C}</Project>
+      <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Multiplayer.Tools.MetricTypes\Unity.Multiplayer.Tools.MetricTypes.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E1894564}</Project>
+      <Name>Unity.Multiplayer.Tools.MetricTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Multiplayer.Tools.NetStatsReporting\Unity.Multiplayer.Tools.NetStatsReporting.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E1894569}</Project>
+      <Name>Unity.Multiplayer.Tools.NetStatsReporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Multiplayer.Tools.NetStats\Unity.Multiplayer.Tools.NetStats.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E1894565}</Project>
+      <Name>Unity.Multiplayer.Tools.NetStats</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Multiplayer.Tools.NetworkSolutionInterface\Unity.Multiplayer.Tools.NetworkSolutionInterface.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E189456B}</Project>
+      <Name>Unity.Multiplayer.Tools.NetworkSolutionInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Networking.Transport\Unity.Networking.Transport.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E189456E}</Project>
+      <Name>Unity.Networking.Transport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.CoreModule\UnityEngine.CoreModule.csproj">
+      <Project>{A2865A95-6777-4D17-A0E5-FFB6E189459A}</Project>
+      <Name>UnityEngine.CoreModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
